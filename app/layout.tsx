@@ -3,8 +3,9 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Ronald's Driving School — VID Test Prep (Demo)",
-  description: "Demo build — driving test prep platform for Ronald's driving school.",
+  title: "Ronald's Driving School | Zimbabwe VID Practice",
+  description:
+    "A driving school website demonstration with VID theory practice and a student learning area.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -1,9 +1,9 @@
-import { redirect } from 'next/navigation';
-import { getSession } from '@/lib/auth';
-import Preview from '../preview/page';
+import { redirect } from "next/navigation";
+import { getSession } from "@/lib/auth";
+import PreviewExperience from "@/app/preview/PreviewExperience";
 
 export default async function DashboardPage() {
   const session = await getSession();
-  if (!session) redirect('/login');
-  return <Preview initialView="student" signedIn />;
+  if (!session) redirect("/login");
+  return <PreviewExperience initialView="student" signedIn />;
 }
