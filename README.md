@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ronald's Driving School — website demonstration
 
-## Getting Started
+A Next.js demonstration for a Zimbabwe driving school. The interface includes a school homepage, sample VID theory practice, student learning area, sample login and admin preview.
 
-First, run the development server:
+**This repository is public. Do not put real student data, passwords, private school records or secrets here.** School identity and sample material remain provisional. Student accounts, saved progress, protected video, enquiry delivery and real administration have not been connected. Do not use this demo for real student records.
+
+## Run locally
+
+Requirements: Node.js and npm.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev -- --port 3100
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open <http://localhost:3100>. The `/preview` route shows the same school preview. To run checks:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Main routes
 
-## Learn More
+- `/` — school homepage and free sample theory test
+- `/login` — demonstration student sign-in
+- `/dashboard` — sample student learning area after demo sign-in
+- `/practice` — sample mock exam after demo sign-in
+- `/preview` — homepage and in-page previews for school, student and admin views
 
-To learn more about Next.js, take a look at the following resources:
+The sample sign-in values are prefilled on the login page. They are public demo credentials and must never be treated as secure accounts.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Demo boundaries
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Questions and answers are sample content pending school/instructor approval.
+- Sample lesson footage is a generic placeholder, not a driving lesson.
+- Progress and admin changes are temporary demonstrations.
+- Enquiry forms do not send or store submissions.
+- Video upload and password reset controls do not perform those actions.
+- The design uses provisional school branding and confirmed contact details are still needed.
 
-## Deploy on Vercel
+## Before real student use
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Implement and verify real authentication and role checks, student data isolation, persistent progress, protected lesson delivery, password recovery, enquiry delivery, approved course content, backups and recovery. Confirm the school identity, content rights, provider costs and account owners. Test the complete student and admin journeys on ordinary phones before inviting students.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The local redesign is source work only. A GitHub push does not by itself prove a successful Vercel deployment; verify the deployment and its target commit separately.
